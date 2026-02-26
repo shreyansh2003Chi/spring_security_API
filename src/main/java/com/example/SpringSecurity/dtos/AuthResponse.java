@@ -1,13 +1,16 @@
 package com.example.SpringSecurity.dtos;
 
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
+
+@Data
+@Builder
 @AllArgsConstructor
-@Getter
-@Setter
+@NoArgsConstructor
 public class AuthResponse {
-    private String token;
+
+    private String accessToken;
+    private String username;
+    private String role;
 }
