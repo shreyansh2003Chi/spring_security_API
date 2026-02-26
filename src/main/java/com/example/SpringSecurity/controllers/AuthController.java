@@ -28,11 +28,8 @@ public class AuthController {
 
         User user = new User();
         user.setUsername(signupRequest.getUsername());
-
         user.setPassword(passwordEncoder.encode(signupRequest.getPassword()));
-
         user.setRole(Role.USER);
-
         userRepository.save(user);
 
         return "User registered successfully";
